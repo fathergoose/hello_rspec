@@ -9,29 +9,29 @@ Feature: code-breaker submits guess
     When I guess "<guess>"
     Then the mark should be "<mark>"
 
-  Scenario: no matches
+  Scenarios: no matches
     | code | guess | mark |
     | 1234 | 5555  |      |
 
-  Scenario: 1 number correct
+  Scenarios: 1 number correct
     | code | guess | mark |
     | 1234 | 1555  | +    |
     | 1234 | 2555  | -    |
 
-  Scenario: 2 numbers correct
+  Scenarios: 2 numbers correct
     | code | guess | mark |
     | 1234 | 1255  | ++   |
     | 1234 | 1355  | +-   |
     | 1234 | 2155  | --   |
 
-  Scenario: 3 numbers correct
+  Scenarios: 3 numbers correct
     | code | guess | mark |
     | 1234 | 1235  | +++  |
     | 1234 | 1253  | ++-  |
     | 1234 | 1354  | +--  |
     | 1234 | 2351  | ---  |
 
-  Scenario: all numbers correct
+  Scenarios: all numbers correct
     | code | guess | mark |
     | 1234 | 1234  | ++++ |
     | 1234 | 1243  | ++-- |
