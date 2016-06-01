@@ -8,6 +8,9 @@ end
 
 Then /^I should see "([^"]*)"$/ do |message|
   terminal_output.messages.should include(message)
+  # RSpec now has a built in matcher
+  # give it a try when the first one passes
+  # expect(game.start).to output(message).to_stdout
 end
 
 class Output
