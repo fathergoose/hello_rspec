@@ -1,1 +1,1 @@
-require 'codebreaker/game'
+require_relative 'codebreaker/game'

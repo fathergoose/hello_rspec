@@ -1,2 +1,2 @@
-require 'codebreaker'
+require 'codebreaker/game'
 
