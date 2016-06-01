@@ -2,7 +2,7 @@ Given /^I am not yet playing$/ do
 end
 
 When /^I start a new game$/ do
-  game = Codebreaker::Game.new(output)
+  game = Codebreaker::Game.new(terminal_output)
   game.start
 end
 
@@ -15,11 +15,11 @@ end
 
 class Output
   def messages
-    @message ||= []
+    @messages ||= []
   end
 
   def puts(message)
-    @messages << message
+    messages << message
   end
 end
 
