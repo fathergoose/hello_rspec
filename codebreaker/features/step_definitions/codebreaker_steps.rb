@@ -7,7 +7,7 @@ When /^I start a new game$/ do
 end
 
 Then /^I should see "([^"]*)"$/ do |message|
-  output.messages.should include(message)
+  terminal_output.messages.should include(message)
 end
 
 class Output
@@ -16,10 +16,10 @@ class Output
   end
 
   def puts(message)
-    messages << message
+    @messages << message
   end
 end
 
-def output
+def terminal_output
   @output ||= Output.new
 end
