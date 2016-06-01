@@ -7,7 +7,7 @@ When /^I start a new game$/ do
 end
 
 Then /^I should see "([^"]*)"$/ do |message|
-  terminal_output.messages.should include(message)
+  expect(terminal_output.messages).to include(message)
   # RSpec now has a built in matcher
   # give it a try when the first one passes
   # expect(game.start).to output(message).to_stdout
